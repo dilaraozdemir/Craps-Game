@@ -7,31 +7,31 @@ int rolldice(int a){
 }
 int main(){
 	
-	int puan=0;
+	int point=0;
 	int again=1;
 	while (again==1){
 	int x=rolldice(x);
 	int y=rolldice(y);
-	int toplam =  x + y;
+	int total =  x + y;
 	
-	printf("toplam = %d\n",toplam);
+	printf("total = %d\n",total);
 	printf("you get %d and %d \n",x,y);
-	if(toplam ==7 || toplam == 10){
+	if(total ==7 || total == 10){
 		printf("You win");
 	}
-	else if(toplam == 2 || toplam == 3 || toplam == 12){
+	else if(total == 2 || total == 3 || total == 12){
 		printf("Game over");
 	}
 	else{
-		puan+=toplam;
-		printf("you have to get %d \n",puan);
-		int toplam = 0;
-		toplam = rolldice(x) + rolldice (y);
+		point+=total;
+		printf("you have to get %d \n",point);
+		int total = 0;
+		total = rolldice(x) + rolldice (y);
 		printf("you get %d and %d \n",rolldice(x),rolldice(y));
-		if(toplam == 7){
+		if(total == 7){
 			printf("You get 7. Game over");
 		}
-		else if (toplam == puan){
+		else if (total == point){
 			printf("You win!");
 		}
 		else{
